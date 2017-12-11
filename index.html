@@ -157,6 +157,27 @@
     #dan-img>amp-img {
       width: 200%;
     }
+
+    .carousel2 {
+      background: #eee;
+      margin: 0;
+    }
+
+    .carousel2 .slide>amp-img>img {
+      object-fit: contain;
+    }
+
+    .carousel2 .caption {
+      position: absolute;
+      top: 50px;
+      left: 30px;
+      right: 30px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ddd;
+      font-size: 1em;
+      max-height: 30%;
+    }
   </style>
   <style amp-boilerplate>
     body {
@@ -298,7 +319,7 @@
         <a href="#">佛學修行</a>
       </li>
       <li>
-        <a href="#">成為專家</a>
+        <a href="#">加入會員</a>
       </li>
     </ul>
   </amp-sidebar>
@@ -323,20 +344,30 @@
         20多年東方命理八字、紫微、姓名、陽宅、占卜研究，10年以上專業命理師，西方塔羅占卜及身心靈諮商師，能直視個人前世今生，解開靈魂的生命功課。</p>
     </div>
 
-    <!--
-      <amp-carousel layout="fixed-height" height="158" type="carousel" >
-        <amp-img src="fate-main-1.png" width="300" height="168"></amp-img>
-        <amp-img src="fate-main-1.png" width="300" height="168"></amp-img>
-        <amp-img src="fate-main-1.png" width="300" height="168"></amp-img>
-      </amp-carousel>
-      -->
+    <!-- Text Overlay -->
+    <!-- Another carousel with caption, this time the caption overlays the image. -->
+    <amp-carousel class="carousel2" layout="responsive" height="317" width="500" type="slides" autoplay delay="4000" loop>
+      <div class="slide">
+        <amp-img src="./img/fate-main-1.png" layout="fill" alt="八字命理"></amp-img>
+        <div class="caption">
+          八字命理
+        </div>
+      </div>
 
-    <amp-carousel id="carousel-2" layout="responsive" width="500" height="317" type="slides" autoplay delay="4000" loop>
-      <amp-img src="fate-main-1.png" width="300" height="168" layout="responsive"></amp-img>
-      <amp-img src="fate-main-1.png" width="300" height="168" layout="responsive"></amp-img>
-      <amp-img src="fate-main-1.png" width="300" height="168" layout="responsive"></amp-img>
+      <div class="slide">
+        <amp-img src="./img/fate-main-1.png" layout="fill" alt="前世今生"></amp-img>
+        <div class="caption">
+          前世今生
+        </div>
+      </div>
+
+      <div class="slide">
+        <amp-img src="./img/fate-main-1.png" layout="fill" alt="塔羅占卜Ｆ"></amp-img>
+        <div class="caption">
+          塔羅占卜
+        </div>
+      </div>
     </amp-carousel>
-
 
     <amp-img src="./img/mountains.jpg" layout="responsive" width="266" height="150"></amp-img>
 
@@ -345,7 +376,7 @@
         <p>The video could not be loaded.</p>
       </div>
     </amp-youtube>
-    
+
     <!--
       <amp-ad 
       width=320 
