@@ -166,7 +166,9 @@
     .carousel2 .slide amp-img {
       object-fit: contain;
     }
-
+    .bk-edm{
+      position: relative;
+    }
     .caption-1 {
       position: absolute;
       top: 30px;
@@ -181,13 +183,14 @@
 
     .caption-2 {
       position: absolute;
-      top: 30px;
-      left: 50px;
-      right: 50px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
       padding: 10px;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0);
       color: #ddd;
-      font-size: 0.9em;
+      font-size: 1em;
+      text-align: center;
       max-height: 100%;
     }
 
@@ -370,7 +373,7 @@
 
     <!-- Text Overlay -->
     <!-- Another carousel with caption, this time the caption overlays the image. -->
-    <amp-carousel class="carousel2" layout="responsive" height="317" width="500" type="slides">
+    <amp-carousel class="carousel2" layout="responsive" height="317" width="500" type="slides" autoplay delay="5000">
       <div class="slide">
         <amp-img src="./img/slide-love.jpg" layout="fill" alt="桃花線"></amp-img>
         <div class="caption-1">
@@ -411,11 +414,18 @@
         </div>
       </div>
     </amp-carousel>
-
-    <amp-img src="./img/budda.jpg" layout="responsive" width="500" height="317"></amp-img>
-    <amp-img src="./img/light-women.jpg" layout="responsive" width="500" height="315"></amp-img>
-
-    <amp-youtube data-videoid="npum8JsITQE" layout="responsive" width="480" height="270">
+    <section class="bk-edm">
+      <amp-img src="./img/light-women.jpg" layout="responsive" width="500" height="317"></amp-img> 
+      <div class="caption-2">
+        <b><h3>解開人生的謎團，掌握自己的未來</h3>
+        </b>
+        
+      </div>
+    </section>
+ 
+    <amp-img src="./img/budda.jpg" layout="responsive" width="500" height="315">解開人生的迷惑</amp-img>
+    
+    <amp-youtube data-videoid="A_h3kt6Dp9M" layout="responsive" width="480" height="270">
       <div fallback>
         <p>The video could not be loaded.</p>
       </div>
