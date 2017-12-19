@@ -26,13 +26,6 @@
       line-height: 2em;
     }
 
-    h1 {
-      padding: 0.5em;
-      text-align: center;
-      background: rgb(248, 226, 194);
-      box-shadow: 0px 5px 10px grey;
-    }
-
     p {
       padding: 0.5em;
       margin: 0.5em;
@@ -86,10 +79,6 @@
       text-decoration: none
     }
 
-    article {
-      margin-top: 70px;
-    }
-
     .hamburger {
       padding-right: 10px;
     }
@@ -141,24 +130,48 @@
       margin-top: 5px;
     }
 
-    #facebook-page {
+    .facebook-page {
+      grid-area: facebook-page;
       text-align: center;
       background-color: black;
     }
 
-    #dan-img {
+    /* 頁面 grid setup */
+
+    .wrapper {
+      width: 100%;
+      color: #666;
+      padding: 0;
+      margin-top: 60px;
+    }
+
+    amp-img {
+      max-width: 100%;
+    }
+    /* 主頁標題廣告 */
+    .main-ad {
+      grid-area: main-ad;
+      text-align: center;
+      line-height: 1em;
+      background: rgb(248, 226, 194);
+      box-shadow: 0px 5px 10px grey;
+    }
+    /* 老師的話 */
+    .teacher {
+      grid-area: teacher;
       padding: 0 10px;
-      display: flex;
+      display: inline-block;
       max-width: 500px;
-      align-items: center;
       margin: auto;
+      padding-top: 20px;
     }
 
-    #dan-img>amp-img {
-      width: 250%;
+    .teacher>amp-img {
+      float: left;
     }
-
+    /* slide 輪播 */
     .carousel2 {
+      grid-area: carousel2;
       background: #eee;
       margin: 0;
     }
@@ -167,7 +180,13 @@
       object-fit: contain;
     }
 
-    .bk-edm {
+    .bg-edm1 {
+      grid-area: bg-edm1;
+      position: relative;
+    }
+
+    .bg-edm2 {
+      grid-area: bg-edm2;
       position: relative;
     }
 
@@ -207,6 +226,28 @@
       font-size: 1em;
       line-height: 1.4em;
       max-height: 60%;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-areas: "main-ad" "teacher" "carousel2" "bg-edm1" "bg-edm2" "video-1" "facebook-page"
+    }
+
+    @media only screen and (min-width:700px) {
+      .wrapper {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "main-ad main-ad" "teacher carousel2" "bg-edm1 bg-edm2" "video-1 facebook-page" 
+      }
+    }
+
+    @media only screen and (min-width:1000px) {
+      .wrapper {
+        max-width:1000px;
+        margin-left: auto;
+        margin-right: auto;	
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "main-ad main-ad" "teacher carousel2" "bg-edm1 bg-edm2" "video-1 facebook-page" 
+      }
     }
   </style>
 
@@ -361,14 +402,14 @@
     <a href="#">教學課程</a>
   </nav>
 
-  <article>
-    <h1>
-      <amp-img src="./img/thumbs-up-icon.png" width="25" height="25"></amp-img>
-      <a href="amp-2018year.html">丹波老師2018流年服務(^^)</a>
-    </h1>
+  <article class="wrapper">
+    <div class="main-ad">
+      <h1><amp-img src="./img/thumbs-up-icon.png" width="25" height="25"></amp-img>
+      <a href="amp-2018year.html">丹波老師2018流年服務(^^)</a></h1>
+    </div>
 
-    <div id="dan-img">
-      <amp-img src="./img/danport.png" width="100" height="121" layout="responsive"></amp-img>
+    <div class="teacher">
+      <amp-img src="./img/danport.png" width="150" height="180" layout="fixed"></amp-img>
       <p>
         <amp-img src="./img/Cultures-Yin-Yang-icon.png" width="30" height="30"></amp-img>
         20多年東方命理八字、紫微、姓名、陽宅、占卜研究，10年以上專業命理師，西方塔羅占卜及身心靈諮商師，能直視個人前世今生，解開靈魂的生命功課。</p>
@@ -418,17 +459,16 @@
       </div>
     </amp-carousel>
 
-    <section class="bk-edm">
+    <section class="bg-edm1">
       <amp-img src="./img/light-women.jpg" layout="responsive" width="500" height="317"></amp-img>
       <div class="caption-2">
         <b>
           <h3>解開人生的謎團，掌握自己的未來</h3>
         </b>
-
       </div>
     </section>
 
-    <section class="bk-edm">
+    <section class="bg-edm2">
       <amp-img src="./img/budda.jpg" layout="responsive" width="500" height="315">解開人生的迷惑</amp-img>
       <div class="caption-3">
         <b>
@@ -439,7 +479,7 @@
       </div>
     </section>
 
-    <amp-youtube data-videoid="A_h3kt6Dp9M" layout="responsive" width="480" height="270">
+    <amp-youtube class="video-1" data-videoid="A_h3kt6Dp9M" layout="responsive" width="480" height="270">
       <div fallback>
         <p>The video could not be loaded.</p>
       </div>
@@ -456,7 +496,7 @@
         <amp-iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdanport.fate%2F&width=370&height=210&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1836760343248250" width="370" height="210" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></amp-iframe>    
       </div>
     -->
-    <div id="facebook-page">
+    <div class="facebook-page">
       <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdanport.fate&width=380&height=210&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=129860784373564"
         width="380" height="210" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
     </div>
