@@ -148,7 +148,9 @@
     amp-img {
       max-width: 100%;
     }
+
     /* 主頁標題廣告 */
+
     .main-ad {
       grid-area: main-ad;
       text-align: center;
@@ -156,7 +158,9 @@
       background: rgb(248, 226, 194);
       box-shadow: 0px 5px 10px grey;
     }
+
     /* 老師的話 */
+
     .teacher {
       grid-area: teacher;
       padding: 0 10px;
@@ -169,10 +173,12 @@
     .teacher>amp-img {
       float: left;
     }
+
     /* slide 輪播 */
+
     .carousel2 {
-      grid-area: carousel2;
-      background: #eee;
+      grid-area: carousel2;
+      background-color: #eee;
       margin: 0;
     }
 
@@ -230,23 +236,24 @@
 
     .wrapper {
       display: grid;
-      grid-template-areas: "main-ad" "teacher" "carousel2" "bg-edm1" "bg-edm2" "video-1" "facebook-page"
+      grid-template-columns: auto;
+      grid-template-areas: "main-ad" "teacher" "carousel2" "bg-edm1" "bg-edm2" "video-1" "facebook-page";
     }
 
     @media only screen and (min-width:700px) {
       .wrapper {
         grid-template-columns: 50% 50%;
-        grid-template-areas: "main-ad main-ad" "teacher carousel2" "bg-edm1 bg-edm2" "video-1 facebook-page" 
+        grid-template-areas: "main-ad main-ad" "teacher carousel2" "bg-edm1 bg-edm2" "video-1 facebook-page";
       }
     }
 
     @media only screen and (min-width:1000px) {
       .wrapper {
-        max-width:1000px;
+        max-width: 1000px;
         margin-left: auto;
-        margin-right: auto;	
+        margin-right: auto;
         grid-template-columns: 50% 50%;
-        grid-template-areas: "main-ad main-ad" "teacher carousel2" "bg-edm1 bg-edm2" "video-1 facebook-page" 
+        grid-template-areas: "main-ad main-ad" "teacher carousel2" "bg-edm1 bg-edm2" "video-1 facebook-page";
       }
     }
   </style>
@@ -377,7 +384,7 @@
     <a href="index.html">
       <amp-img class="home-button" src="./img/danport-logo.png" width="36" height="36"></amp-img>
     </a>
-    <div class="site-name">丹波命理．前世今生</div>
+    <div class="site-name"><a href="index.html">丹波命理．前世今生</a></div>
     <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
 
   </header>
@@ -397,15 +404,17 @@
   </amp-sidebar>
   <nav>
     <a href="./services.html">服務項目</a> |
-    <a href="#">線上預約</a> |
+    <a href="./onlineorder.html">線上預約</a> |
     <a href="#">案例文章</a> |
     <a href="#">教學課程</a>
   </nav>
 
   <article class="wrapper">
     <div class="main-ad">
-      <h1><amp-img src="./img/thumbs-up-icon.png" width="25" height="25"></amp-img>
-      <a href="amp-2018year.html">丹波老師2018流年服務(^^)</a></h1>
+      <h1>
+        <amp-img src="./img/thumbs-up-icon.png" width="25" height="25"></amp-img>
+        <a href="amp-2018year.html">丹波老師2018流年服務(^^)</a>
+      </h1>
     </div>
 
     <div class="teacher">

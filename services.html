@@ -26,14 +26,6 @@
       line-height: 2em;
     }
 
-    h1 {
-      padding: 0.5em;
-      color: darkred;
-      text-align: center;
-      background: rgb(248, 226, 194);
-      box-shadow: 0px 5px 10px grey;
-    }
-
     p {
       padding: 0.5em;
       margin: 0.5em;
@@ -87,8 +79,19 @@
       text-decoration: none
     }
 
-    article {
-      margin-top: 70px;
+    .wrapper {
+      max-width: 600px;
+      color: #666;
+      padding: 0;
+      margin-top: 60px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-areas: "main-ad" "teacher";
     }
 
     .hamburger {
@@ -147,67 +150,26 @@
       background-color: black;
     }
 
-    #dan-img {
+    .teacher {
+      grid-area: teacher;
       padding: 0 10px;
       display: inline-block;
       max-width: 500px;
-      margin: auto;
+      padding-top: 20px;
     }
 
-    #dan-img>amp-img {
-      float: left;
+    .teacher>amp-img {
+      float:right;
     }
 
-    .carousel2 {
-      background: #eee;
-      margin: 0;
-    }
-
-    .carousel2 .slide amp-img {
-      object-fit: contain;
-    }
-
-    .bk-edm {
-      position: relative;
-    }
-
-    .caption-1 {
-      position: absolute;
-      top: 30px;
-      left: 50px;
-      right: 50px;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0.6);
-      color: #ddd;
-      font-size: 0.9em;
-      max-height: 100%;
-    }
-
-    .caption-2 {
-      position: absolute;
-      bottom: 10px;
-      left: 10px;
-      right: 10px;
-      padding: 10px;
-      background: rgba(0, 0, 0, 0);
-      color: #ddd;
-      font-size: 1em;
+    .main-ad {
+      grid-area: main-ad;
       text-align: center;
-      max-height: 100%;
+      line-height: 1em;
+      background: rgb(248, 226, 194);
+      box-shadow: 0px 5px 10px grey;
     }
-
-    .caption-3 {
-      position: absolute;
-      top: 30px;
-      left: 50px;
-      padding: 20px;
-      width: 100px;
-      background: rgba(0, 0, 0, 0.4);
-      color: #ddd;
-      font-size: 1em;
-      line-height: 1.4em;
-      max-height: 60%;
-    }
+   
   </style>
 
   <style amp-boilerplate>
@@ -336,7 +298,7 @@
     <a href="index.html">
       <amp-img class="home-button" src="./img/danport-logo.png" width="36" height="36"></amp-img>
     </a>
-    <div class="site-name">丹波命理．前世今生</div>
+    <div class="site-name"><a href="index.html">丹波命理．前世今生</a></div>
     <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
 
   </header>
@@ -355,23 +317,25 @@
     </ul>
   </amp-sidebar>
   <nav>
-    <a href="#">服務項目</a> |
-    <a href="#">線上預約</a> |
+    <a href="./services.html">服務項目</a> |
+    <a href="./onlineorder.html">線上預約</a> |
     <a href="#">案例文章</a> |
     <a href="#">教學課程</a>
   </nav>
 
-  <article>
-    <h1>
-      <amp-img src="./img/thumbs-up-icon.png" width="25" height="25"></amp-img>
-      丹波老師服務項目(^^)
-    </h1>
+  <article class="wrapper">
+    <div class="main-ad">
+      <h1>
+        <amp-img src="./img/thumbs-up-icon.png" width="25" height="25"></amp-img>
+        丹波老師2018服務項目(^^)
+      </h1>
+    </div>
 
-    <div id="dan-img">
+    <div class="teacher">
       <amp-img src="./img/danport.png" width="150" height="180" layout="fixed"></amp-img>
       <p>
         <amp-img src="./img/Cultures-Yin-Yang-icon.png" width="30" height="30"></amp-img>
-        專業命理命理師需要多年的學習及養成，透過實務案例及人生經歷淬煉出 “智慧”，並＄＄自我修練人生功課，才能提供最佳的建議。</p>
+        專業命理命理師需要多年的學習及養成，透過實務案例及人生經歷淬煉出 “智慧”，並自我修練人生功課，才能提供最佳的建議。</p>
     </div>
 
     <!-- Text Overlay -->
