@@ -184,6 +184,47 @@
     .video-1{
         grid-area: video-1;
     }
+
+    .pluse{
+      position: absolute;
+      width: 100px;
+      height: 45px;
+      left: 40%;
+    }
+    .pluse:after, .pluse:before{
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 15px;
+      border: 50%;
+      border: 1px solid #58ea00;
+      left: -10px;
+      right: -10px;
+      top: -10px;
+      bottom: -10px;
+      animation: animate 2s linear infinite;
+      opacity: 0;
+      backface-visibility: hidden;
+    }
+    .pluse:after{
+      animation-delay: 1s;
+    }
+    @keyframes animate {
+      0%{
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      50%{
+        opacity: 1;
+      }
+      100%{
+        transform: scale(1.2);
+        opacity: 0;
+      }
+      
+    }
+
+
   </style>
 
   <style amp-boilerplate>
@@ -360,10 +401,12 @@
     <figure class="image-line m0 relative">
         <amp-img src="./img/sky-star.jpg" width="500" height="300" alt="Order online" layout="responsive" ></amp-img>
         <div class="absolute top-0 right-0 bottom-0 left-0 h2 flex  flex-column justify-center center">
-                <a class="border rounded p1 mx3" href="tel:0938949288">電話：0938949288</a><br>
+                <a class="border rounded p1 mx3" href="tel:0938949288">電話：0938949288</a><br>                 
                 <a href="https://line.me/R/ti/p/%40dir1895e">
+                  <div class="pluse"> 
                     <amp-img width="100" height="45" alt="加入好友" src="./img/line-friend.png"></amp-img>
-                </a>
+                  </div> 
+                </a>                 
         </div>
     </figure>
 
