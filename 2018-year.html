@@ -81,7 +81,12 @@
       color: lightgoldenrodyellow;
       text-decoration: none
     }
-
+    .bg-red{
+      background-color:darkmagenta;
+    }
+    .white{
+      color:white;
+    }
     .wrapper {
       max-width: 600px;
       color: #666;
@@ -94,7 +99,7 @@
     .wrapper {
       display: grid;
       grid-template-columns: auto;
-      grid-template-areas: "main-ad" "teacher" "video-1" "facebook-page" 
+      grid-template-areas: "main-ad" "teacher" "fee-box" "day-description" "video-1" "facebook-page" 
     }
 
     .hamburger {
@@ -177,12 +182,32 @@
         grid-area: image-line;
     }
 
+    .fee-box{
+      grid-area: fee-box;
+    }
     .facebook-page{
         grid-area: facebook-page;
     }
     
     .video-1{
         grid-area: video-1;
+    }
+
+    .day-description {
+      grid-area: day-description;
+      line-height: 2em;
+      background-color:lightgoldenrodyellow;
+    }
+    .day-description p{
+      line-height: 1.4em;
+      text-align: left;
+    }
+    
+    amp-accordion section[expanded] .show-more {
+      display: none;
+    }
+    amp-accordion section:not([expanded]) .show-less {
+      display: none;
     }
   </style>
 
@@ -345,16 +370,84 @@
       </h1>
     </div>
 
-    <div class="teacher h5 pr1 block mx-auto">
+    <div class="teacher pr1 block mx-auto">
       <amp-img src="./img/danport.png" width="150" height="180" layout="fixed"></amp-img>
       <p>
         <amp-img src="./img/Cultures-Yin-Yang-icon.png" width="30" height="30"></amp-img>
-        每年老師在新年過年前，都會提供老客戶們未來一年的新流年命理吉凶建議，
-        2018年是戊戌年，是土狗年，火土旺的流年，利木火命人發財，利金水命人升官，土命人就較易損財不利！
-        2018/1~2月歡迎預約。
+        每年老師都會提供老客戶們未來新流年命理吉凶建議，
+        2018年是戊戌年，是土狗年，火土旺的流年，各命人會不會發財、升官、戀情等，點擊以下說明：
       </p>
     </div>
 
+    <div class="fee-box p2 h3 white bg-red center">
+      (^^)老客戶～看新流年 2000元/人<br>
+      服務再加值～補財庫$$
+    </div>
+    <!-- 各日主的accordion -->
+    <amp-accordion class="day-description h3 center p1" disable-session-states>
+      <section class="mb1">
+        <h4>
+          <span class="show-more" style="color:green">甲乙  木命日主▼</span>
+          <span class="show-less" style="color:green">甲乙  木命日主▲</span>
+        </h4>
+        <p class="h4 py2">
+            <b>木命主的人</b>，今年是大好運的一年，旺財旺市，好事多多，當然工作會比較忙碌，賺錢的機會更多，人脈關係更好，業績會提升，也有外派出差機會。<br>
+            想要加薪轉職正是時候，業務工作的朋友，今年可以多加努力，絕對收入會倍增。
+            但避免操勞過度，造成身體負擔小毛病變多，要防止過度的花錢，造成財來財去，瞎忙一場。<br>今年是有戀情的一年，桃花會比較多，適合多一點的交際跟聚會，最好的緣份到來！<br>
+            <b>春天生的人</b>，今年財運是最好的，透過合作能夠有更多的收入，只是比較沒有休息的時間，<b>夏天生的人</b>，好運更是加旺，今年絕對非常豐收，簡直是忙壞了，要注意身體喔，<b>秋天生的人</b>更會有升官的機會，但容易因為錢而產生一些糾紛，不適合開店營業，<b>冬天生的人</b>相對的就比較保守，反而會影響到工作，身體也會不好。
+        </p>
+      </section>
+
+      <section class="mb1">
+        <h4>
+          <span class="show-more" style="color:red">丙丁  火命日主▼</span>
+          <span class="show-less" style="color:red">丙丁  火命日主▲</span>
+        </h4>
+        <p class="h4 py2">
+          <b>火命主的人</b>，今年是辛苦的一年，要比別人付出的更多，勞心勞力，但是還是有利於財運，要注意言語上的是非，心情起伏比較大，同事間的勾心鬥角，與主管常常意見不合。<br>
+          今年會有新的想法，想要有更好的變動，有利創新、突破、成長，有適合多出外走一走，會有更好的想法跟點子。今年的感情比較容易有變動，已婚的人適合生小孩， 感情不穩定的容易這時候分手，彼此不要太過於衝動。<br>
+          <b>春天生的人</b>，會有新的任務發展，在原本穩定的狀態下，必須要改變，注意跟主管的關係變差，<b>夏天生的人</b>，可以好好的發揮，會有很好的成績，今年會非常的順心，<b>秋天生的人</b>，本來就很忙碌，今年會更加的忙碌，為了錢財只好拼了！算是最有利於財運的人。<b>冬天生的人</b>今年要小心啊，恐怕小人是非多，沒事還被迫離職，付出很多，但是難有好成績！ 
+           </p>
+      </section>
+
+      <section class="mb1">
+        <h4>
+          <span class="show-more" style="color:brown">戊己  土命日主▼</span>
+          <span class="show-less" style="color:brown">戊己  土命日主▲</span>
+        </h4>
+        <p class="h4 py2">
+          <b>土命主的人</b>，今年要非常的小心啊，走劫財破財年，不花錢是過不去的，今年很容易大失血，所以投資創業都要很小心，但可以置產存錢，<br>今年很容易心煩氣躁，住處有很多小問題，今年就是吃喝玩樂很多，財運一定是不好啦，消業障啦，有利出國旅遊，今年也是出外發展的一年，但要謹慎規劃，保守為上！<br>
+          工作升官的機會很少，也沒有太多的戀情發展，朋友打屁聊天八卦，最好是能做一些學習上課，增加自己的知識及專業。<br>
+          <b>春天生的人</b>，今年會獲得比較好的助力，但工作會增，吃力不討好，同事容易出問題，然後容易背黑鍋，壓力非常的大，<b>夏天生的人</b>，本來就很煩躁了，現在問題更多，事情一直不順一直出錯，被罵被兇很倒楣，最好去拜拜，絕對不能亂投資不然一定大破財，<b>秋天生的人</b>， 今年有很多合作的機會，有出名的機會，獨立事業的人是挑戰自己的時候， 會容易判斷錯誤造成損財，屬下的問題比較多 ，升官就不用想了，<b>冬天生的人</b>，本來財運還不錯，今年破大財，原本的事業跟投資，一直變得更差，趕快止血，也很容易被朋友敗財，總之今年是倒楣透頂啊！乾脆休息算了。
+        </p>
+      </section>
+
+      <section class="mb1">
+        <h4>
+          <span class="show-more" style="color:blue">庚辛  金命日主▼</span>
+          <span class="show-less" style="color:blue">庚辛  金命日主▲</span>
+        </h4>
+        <p class="h4 py2">
+          <b>金命主的人</b>，今年是享福的一年，貴人多吉星高照，但會比較平穩缺少變化，容易沉悶多煩，今年不利賺錢，業績跟收入都會開始下滑，適合做一點學習跟增加專業能力，<br>
+          金命的人都比較剛硬，今年就要學習柔軟，如何放下身段與人合作，今年長輩緣非常好，沒事都有好吃好穿的，適合買房產，投資理財要保守，<br>
+          還沒結婚了適合結婚，今年要注意媽媽的身體，最好的事情是升官了，掌權有職位，但不利於創業投資，戀情也是穩定，女生會有好的追求者，男生就乖乖工作吧！<br>
+          <b>春天生的人</b>，本來就是享樂主義的，今年會比較安分一點，減少一點開銷，今年負擔比較大，要認真工作保守為上，<b>夏天生的人</b>，今年官運亨通，沒事就升官，但是壓力也是比較大，會掌管新的部門，職務調動外地出差，<b>秋天生的人</b>，最好什麼事都不要做，很容易踩地雷，被老闆盯，苦差事都是你，只有苦勞沒功勞，認命吧！最好躲起來，<b>冬天生的人</b>，心情會好一點，至少不會想東想西，會比較認真做事情，比較穩定，老闆長官的關係會變好，但是不要輕易的投資，沒什麼戀情，所以自己找些事情做！ 
+        </p>
+      </section>
+
+      <section class="mb1">
+        <h4>
+          <span class="show-more" style="color:black">壬癸  水命日主▼</span>
+          <span class="show-less" style="color:black">壬癸  水命日主▲</span>
+        </h4>
+        <p class="h4 py2">
+          <b>水命主的人</b>，今年是壓力最重的一年，工作多又煩，戀情也沒什麼進展，辛苦努力但很少有好成績，就算是升官了還是做不到，想一想還真想離職，但也不知道做什麼，只好繼續忍耐下去。<br>
+          辛苦還是有錢賺啦，不要抱怨不要多想，今年反而適合創業，但要謹慎規劃，可以的話找人合作分擔風險，財運沒有很好，所以適合做副業增加收入，<br>今年身體也會小毛病，需要點個平安燈，公務人員反而有升官的機會，學生的考運也很好，上班族只能忍耐了，如果有出國的機會最好能把握，<br>
+          女生今年會有好的緣份到來，也會有結婚的機會，跟老闆的關係不會很好，低調的一年！<br>
+          <b>春天生的人</b>，天生就有才華，今年反而綁手綁腳，諸事不順，倒楣透頂，鳥事一堆，只求平安吧，<b>夏天生的人</b>，非常愛賺錢，今年反而為了錢而辛苦，注意金錢糾紛，小人是非，心情難過！<b>秋天生的人</b>，工作還算穩定，今年鐵定升官了， 但是責任加重，需要更努力更專注，突破難關奮力向前，<b>冬天生的人</b>，跟朋友之間容易有糾紛，愛情有第三者，投資的錢財都收不回來，困難度很高，很難有什麼突破，拜拜求平安符，請老天幫忙吧！ 
+        </p>
+      </section>
+    </amp-accordion>
     <!-- Start Image with Caption
     <figure class="image-line m0 relative">
         <amp-img src="./img/sky-star.jpg" width="500" height="300" alt="Order online" layout="responsive" ></amp-img>
